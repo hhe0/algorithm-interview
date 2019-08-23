@@ -1,6 +1,9 @@
 package slice
 
-import "algorithm-interview/structure/linklist"
+import (
+	"algorithm-interview/structure/linklist"
+	"fmt"
+)
 
 type SliceType []interface{}
 
@@ -29,4 +32,21 @@ func (s SliceType) Slice2LinkList() *linklist.LinkNode {
 	}
 
 	return head
+}
+
+// 反转切片
+func (s SliceType) ReverseSlice() SliceType {
+	temp := s[0]
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		temp = s[i]
+		s[i] = s[j]
+		s[j] = temp
+	}
+
+	return s
+}
+
+// 打印切片
+func (s SliceType) PrintSlice() {
+	fmt.Println(s)
 }
