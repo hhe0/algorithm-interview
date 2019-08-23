@@ -2,29 +2,17 @@ package main
 
 import (
 	"algorithm-interview/structure/linklist"
-	"fmt"
+	"algorithm-interview/structure/slice"
 	"math"
 	"strconv"
 )
 
 func main() {
-	headA := linklist.NewLinkNode(0)
-	headA.AddNode(linklist.LinkNode{
-		Data: 3, Next: nil,
-	}).AddNode(linklist.LinkNode{
-		Data: 1, Next: nil,
-	}).AddNode(linklist.LinkNode{
-		Data: 5, Next: nil,
-	})
+	sliceData := slice.SliceType{3, 1, 5}
+	headA := sliceData.Slice2LinkList()
 
-	headB := linklist.NewLinkNode(0)
-	headB.AddNode(linklist.LinkNode{
-		Data: 7, Next: nil,
-	}).AddNode(linklist.LinkNode{
-		Data: 9, Next: nil,
-	}).AddNode(linklist.LinkNode{
-		Data: 2, Next: nil,
-	})
+	sliceData = slice.SliceType{7, 9, 2}
+	headB := sliceData.Slice2LinkList()
 
 	// 链表转为数字
 	numA := 0
@@ -54,7 +42,6 @@ func main() {
 	resString := strconv.Itoa(res)
 	for i := len(resString) - 1; i >= 0; i-- {
 		num, _ := strconv.Atoi(string(resString[i]))
-		fmt.Println(num)
 		tailNode := tempNode.AddNode(linklist.LinkNode{
 			Data: num, Next: nil,
 		})

@@ -6,28 +6,15 @@ import (
 )
 
 func main() {
-	head := linklist.NewLinkNode(0)
-
-	head.AddNode(linklist.LinkNode{
-		Data: 1, Next: nil,
-	}).AddNode(linklist.LinkNode{
-		Data: 3, Next: nil,
-	}).AddNode(linklist.LinkNode{
-		Data: 1, Next: nil,
-	}).AddNode(linklist.LinkNode{
-		Data: 5, Next: nil,
-	}).AddNode(linklist.LinkNode{
-		Data: 5, Next: nil,
-	}).AddNode(linklist.LinkNode{
-		Data: 7, Next: nil,
-	})
+	sliceData := slice.SliceType{1, 3, 1, 5, 5, 7}
+	head := sliceData.Slice2LinkList()
 	head.PrintLinkList()
 
 	// 映射到 slice 去重（没办法使用map，map会无序）
-	linkListSlice := make([]interface{}, 0)
+	linkListSlice := make(slice.SliceType, 0)
 	firstNode := head.Next
 	for firstNode != nil {
-		if !slice.InSlice(firstNode.Data, linkListSlice) {
+		if !linkListSlice.InSlice(firstNode.Data) {
 			linkListSlice = append(linkListSlice, firstNode.Data)
 		}
 
