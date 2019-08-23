@@ -1,3 +1,3 @@
-module github.com/hhe0/algorithm-interview
+module algorithm-interview
 
 go 1.12
