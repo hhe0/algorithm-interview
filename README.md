@@ -1,7 +1,7 @@
 ## 第1章 链表
 * <a href="">1.1  如何实现链表的排序</a>
-* <a href="">1.2  如何从无序链表中移除重复项</a>
-* <a href="">1.3  如何计算两个单链表所代表的数之和</a>
+* <a href="https://github.com/hhe0/algorithm-interview/blob/master/chap1/1.2/md/1.2.md">1.2  如何从无序链表中移除重复项</a>
+* <a href="https://github.com/hhe0/algorithm-interview/blob/master/chap1/1.3/md/1.3.md">1.3  如何计算两个单链表所代表的数之和</a>
 * <a href="">1.4  如何对链表进行重新排序</a>
 * <a href="">1.5  如何找出单链表中的倒数第 k 个元素</a>
 * <a href="">1.6  如何检测一个较大的单链表是否有环</a> 
