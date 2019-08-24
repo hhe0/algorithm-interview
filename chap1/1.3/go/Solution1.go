@@ -3,16 +3,17 @@ package main
 import (
 	"algorithm-interview/structure/linklist"
 	"algorithm-interview/structure/slice"
+	"algorithm-interview/structure/util"
 	"math"
 	"strconv"
 )
 
 func main() {
 	sliceData := slice.SliceType{3, 1, 5}
-	headA := sliceData.Slice2LinkList()
+	headA := util.Slice2LinkList(sliceData)
 
 	sliceData = slice.SliceType{7, 9, 2}
-	headB := sliceData.Slice2LinkList()
+	headB := util.Slice2LinkList(sliceData)
 
 	// 链表转为数字
 	numA := 0

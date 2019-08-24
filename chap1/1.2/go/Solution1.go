@@ -3,11 +3,12 @@ package main
 import (
 	"algorithm-interview/structure/linklist"
 	"algorithm-interview/structure/slice"
+	"algorithm-interview/structure/util"
 )
 
 func main() {
 	sliceData := slice.SliceType{1, 3, 1, 5, 5, 7}
-	head := sliceData.Slice2LinkList()
+	head := util.Slice2LinkList(sliceData)
 	head.PrintLinkList()
 
 	// 映射到 slice 去重（没办法使用map，map会无序）

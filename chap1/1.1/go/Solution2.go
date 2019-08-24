@@ -1,10 +1,13 @@
 package main
 
-import "algorithm-interview/structure/slice"
+import (
+	"algorithm-interview/structure/slice"
+	"algorithm-interview/structure/util"
+)
 
 func main() {
 	sliceData := slice.SliceType{1, 2, 3, 4, 5, 6}
-	head := sliceData.Slice2LinkList()
+	head := util.Slice2LinkList(sliceData)
 	head.PrintLinkList()
 
 	tempINode := head.Next

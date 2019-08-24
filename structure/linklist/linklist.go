@@ -1,6 +1,8 @@
 package linklist
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type DataType interface{}
 

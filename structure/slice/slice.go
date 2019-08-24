@@ -1,7 +1,6 @@
 package slice
 
 import (
-	"algorithm-interview/structure/linklist"
 	"fmt"
 )
 
@@ -16,22 +15,6 @@ func (s SliceType) InSlice(a interface{}) bool {
 	}
 
 	return false
-}
-
-// 切片转链表
-func (s SliceType) Slice2LinkList() *linklist.LinkNode {
-	head := linklist.NewLinkNode(0)
-
-	tempNode := head
-	for _, element := range s {
-		tailNode := tempNode.AddNode(linklist.LinkNode{
-			Data: element, Next: nil,
-		})
-
-		tempNode = tailNode
-	}
-
-	return head
 }
 
 // 反转切片
